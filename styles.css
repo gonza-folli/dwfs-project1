@@ -28,6 +28,7 @@ label.mobile-menu {
     top: 16px;
 }
 label .linea {
+    display: block;
     width: 18px;
     height: 2px;
     background-color: black;
@@ -36,7 +37,7 @@ label .linea {
 nav.mobile-expanded {
     position: absolute;
     top: 44px;
-    display: none;
+    right: 100vw;
     width: 100%;
     height: 224px;
     background-color: #0000EC;
@@ -44,7 +45,6 @@ nav.mobile-expanded {
 nav.desktop-expanded {
     display: none;
 }
-/* ver el tema del padding*/
 nav.mobile-expanded li{
     font-family: 'IBM Plex Mono';
     font-size: 16px;
@@ -87,8 +87,7 @@ input.mobile-menu:checked~label.mobile-menu .n3{
 
 /* transicion del hamburguesa */
 input.mobile-menu:checked~nav.mobile-expanded{
-    left: 0px;
-    display: block;
+    right: 0vw;
     transition: all 0.5s linear;
 }
 
@@ -136,7 +135,6 @@ input.mobile-menu:checked~nav.mobile-expanded{
 h1 {
     font-size: 36px;
     margin-left: 5%;
-    /*line-height: 42px;*/
 }
 p {
     font-family: 'IBM Plex Mono';
@@ -230,14 +228,20 @@ div.episodios-section1 {
     width: 92.5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 div.episodios-section2 {
     width: 92.5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 iframe {
+    border: transparent;
+    height: 232px;
+    width: 100%;
     margin: 0px 0px 10px 0px;
+    max-width: 584px;
 }
 @media screen and (min-width: 450px) {
     div.episodios{
@@ -265,20 +269,21 @@ iframe {
     div.episodios-section1 {
         flex-direction: row;
         margin-top: 26px;
+        justify-content: center;
     }
 }
 @media screen and (min-width: 768px) {
     div.episodios-section2 {
         flex-direction: row;
         margin-top: 72px;
+        justify-content: center;
     }
 }
 @media screen and (min-width: 768px) {
     div.episodios iframe {
-        margin: 0px 20px;
+        margin: 0px 36px;
     }
 }
-
 /* SECCION DE DONDE VENIMOS */
 div.comefrom {
     display: flex;
@@ -286,7 +291,7 @@ div.comefrom {
     align-items: center;
 }
 img.comefrom-image {
-    width: 320px; /*ajustar tamaño sobrante de la imagen*/
+    width: 320px;
     height: 529px;
     z-index: 1;
     margin-top: -50px;
@@ -345,8 +350,8 @@ h1.invitados {
 @media screen and (min-width: 426px) {
     .invitados1 {
         flex-direction: row;
-        /*max-width: 100vw;*/
         flex-wrap: wrap;
+        margin-top: 36px;
     }
 }
 @media screen and (min-width: 426px) {
